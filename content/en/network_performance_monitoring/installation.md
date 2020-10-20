@@ -142,16 +142,16 @@ If you already have the [Agent running with a manifest][3]:
 
     ```yaml
     spec:
-        selector:
-            matchLabels:
-                app: datadog-agent
-        template:
-            metadata:
-                labels:
-                    app: datadog-agent
-                name: datadog-agent
-                annotations:
-                    container.apparmor.security.beta.kubernetes.io/system-probe: unconfined
+      selector:
+        matchLabels:
+          app: datadog-agent
+      template:
+        metadata:
+          labels:
+            app: datadog-agent
+            name: datadog-agent
+          annotations:
+            container.apparmor.security.beta.kubernetes.io/system-probe: unconfined
     ```
 
 2. Enable process collection and the system probe with the following environment variables in the Agent container. If all Agents are running in a single container, use:
